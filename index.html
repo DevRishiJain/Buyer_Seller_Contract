@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Contract Frontend</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Trade Contract</h1>
+
+    <div id="form-container">
+        <label for="token">Token Address:</label>
+        <input type="text" id="token" placeholder="Token Address">
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" placeholder="Price">
+
+        <button onclick="createOrder()">Create Order</button>
+
+        <hr>
+
+        <label for="orderId">Order ID:</label>
+        <input type="number" id="orderId" placeholder="Order ID">
+
+        <label for="message">Message:</label>
+        <input type="text" id="message" placeholder="Message">
+
+        <button onclick="register()">Register Buyer</button>
+
+        <label for="fulfillMessage">Fulfill Message:</label>
+        <input type="text" id="fulfillMessage" placeholder="Fulfill Message">
+
+        <label for="signature">Signature:</label>
+        <input type="text" id="signature" placeholder="Signature">
+
+        <button onclick="fulfill()">Fulfill Order</button>
+
+        <hr>
+
+        <h2>Order Details</h2>
+        <label for="getOrderDetailsId">Order ID:</label>
+        <input type="number" id="getOrderDetailsId" placeholder="Order ID">
+
+        <button onclick="getOrderDetails()">Get Order Details</button>
+    </div>
+
+    <pre id="orderDetails"></pre>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.6/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
